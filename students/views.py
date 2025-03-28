@@ -11,7 +11,7 @@ def index(request):
     })
 
 def all_students(request):
-    all_students = Student.objects.all()
+    all_students = Student.objects.all().order_by('student_id')
     return render(request, 'students/all_students.html', {
         'students': all_students
     })
