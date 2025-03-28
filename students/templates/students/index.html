@@ -17,6 +17,7 @@
                             <th scope="col">Student ID</th>
                             <th scope="col">First Name</th>
                             <th scope="col">Last Name</th>
+                            <th scope="col">Gender</th>
                             <th scope="col">Email</th>
                             <th scope="col">Course</th>
                             <th scope="col">GPA</th>
@@ -29,6 +30,7 @@
                                 <td>{{ student.student_id }}</td>
                                 <td>{{ student.first_name }}</td>
                                 <td>{{ student.last_name }}</td>
+                                <td>{{ student.gender }}</td>
                                 <td>{{ student.email }}</td>
                                 <td>{{ student.course }}</td>
                                 <td>{{ student.gpa }}</td>
@@ -53,8 +55,9 @@
                                                 <li>Student ID: <strong>{{ student.student_id}}</strong></li>
                                                 <li>First Name: <strong>{{ student.first_name}}</strong></li>
                                                 <li>Last Name: <strong>{{ student.last_name}}</strong></li>
+                                                <li>Gender: <strong>{{ student.get_gender_display}}</strong></li>
                                                 <li>Email: <strong>{{ student.email}}</strong></li>
-                                                <li>Course: <strong>{{ student.course}}</strong></li>
+                                                <li>Course: <strong>{{ student.get_course_display}}</strong></li>
                                                 <li>GPA: <strong>{{ student.gpa}}</strong></li>
                                               </ul>
                                             </div>

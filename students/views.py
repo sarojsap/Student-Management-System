@@ -33,6 +33,7 @@ def add(request):
             new_student_id = form.cleaned_data['student_id']
             new_first_name = form.cleaned_data['first_name']
             new_last_name = form.cleaned_data['last_name']
+            new_gender = form.cleaned_data['gender']
             new_email = form.cleaned_data['email']
             new_course = form.cleaned_data['course']
             new_gpa = form.cleaned_data['gpa']
@@ -41,9 +42,10 @@ def add(request):
                 student_id = new_student_id,
                 first_name = new_first_name,
                 last_name = new_last_name,
+                gender = new_gender,
                 email = new_email,
                 course = new_course,
-                gpa = new_gpa
+                gpa = new_gpa,
             )
             new_student.save()
             return render(request, 'students/add.html',{
